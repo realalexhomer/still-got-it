@@ -49,6 +49,10 @@ module.exports = {
             }],
         }),
       },
+      {
+        test: /\.pug$/,
+        use: ['pug-loader']
+      }
     ]
   },
 
@@ -58,7 +62,7 @@ module.exports = {
     }),
     new ExtractTextPlugin('style.css'),
     new HtmlWebpackPlugin({
-      template: './index.html'
+      template: './index.pug'
     }),
   ]
 }
