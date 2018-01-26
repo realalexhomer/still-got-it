@@ -1,0 +1,40 @@
+{
+  "name": "still-got-it",
+  "version": "1.0.0",
+  "description": "trying to show the world i still got it",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev": "./node_modules/.bin/webpack-dev-server --watch"
+  },
+  "repository": "git+https://github.com/realalexhomer/still-got-it.git",
+  "keywords": [
+    "node",
+    "react",
+    "rxjs",
+    "postcss",
+    "redux"
+  ],
+  "author": "alex homer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/realalexhomer/still-got-it/issues"
+  },
+  "homepage": "https://github.com/realalexhomer/still-got-it#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "private": false,
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router": "^4.2.0",
+    "redux": "^3.7.2"
+  }
+}
