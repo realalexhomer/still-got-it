@@ -1,0 +1,12 @@
+@import "variables";
+
+.counter {
+  background-color: $primary-bg;
+
+  .button {
+
+  }
+  .count {
+    font-size: 100px;
+  }
+}
