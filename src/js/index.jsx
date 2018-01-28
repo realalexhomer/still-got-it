@@ -2,23 +2,18 @@
 import React from 'react'
 import 'rxjs'
 import { render } from 'react-dom'
-import { createStore, applyMiddleware } from 'redux'
-import { createEpicMiddleware } from 'redux-observable'
 import { Provider, ReactRedux } from 'react-redux' // eslint-disable-line no-unused-vars
 import App from './components/App'
-import rootEpic from './rootEpic'
-import rootReducer from './rootReducer'
+import Counter from './components/Counter'
+import configureStore from './configure/configureStore'
 
-const epicMiddleware = createEpicMiddleware(rootEpic)
-
-const store = createStore(
-  rootReducer,
-  applyMiddleware(epicMiddleware),
-)
+const store = configureStore()
 
 render(
   <Provider store={store}>
-    <App />
+    <App>
+      <Counter />
+    </App>
   </Provider>,
   document.getElementById('root'),
 )

@@ -1,11 +1,17 @@
 // @flow
-import React from 'react'
+import * as React from 'react'
 import style from './style.css' // eslint-disable-line no-unused-vars
 
-export default function App() {
+type AppProps = {
+  children: React.Node
+}
+
+export default function App(props:AppProps) {
+  const { children } = props
+
   return (
     <div>
-      Hello World!
+      { children }
     </div>
   )
 }

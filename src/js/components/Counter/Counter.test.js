@@ -6,18 +6,18 @@ describe('Counter', () => {
   describe('CounterReducer', () => {
     let counterStore = reducer(undefined, {})
 
-    it('should start with a counterNumber of 0', () => {
-      expect(counterStore.counterNumber).to.equal(0)
+    it('should initialize the store with a count of 0', () => {
+      expect(counterStore.count).to.equal(0)
     })
 
-    it('should increment or decrement by the number of steps provided', () => {
+    it('should increment or decrement the count by the number of steps provided', () => {
       counterStore = reducer(counterStore, counterStep(1))
 
-      expect(counterStore.counterNumber).to.equal(1)
+      expect(counterStore.count).to.equal(1)
 
       counterStore = reducer(counterStore, counterStep(-100))
 
-      expect(counterStore.counterNumber).to.equal(-99)
+      expect(counterStore.count).to.equal(-99)
     })
   })
 })

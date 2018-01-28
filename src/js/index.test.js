@@ -1,9 +1,7 @@
 import chai from 'chai'
 
-describe('Array', () => {
-  it('should start empty', () => {
-    const arr = []
-
-    chai.assert.equal(arr.length, 0)
+describe('Sanity check', () => {
+  it('should pass a sanity check', () => {
+    chai.assert.equal(0, 0)
   })
 })
