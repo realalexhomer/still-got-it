@@ -52,6 +52,11 @@ module.exports = {
       {
         test: /\.pug$/,
         use: ['pug-loader']
+      },
+      {
+        test: /\.test\.js$/,
+        use: ['mocha-loader', 'eslint-loader'],
+        exclude: /node_modules/,
       }
     ]
   },
