@@ -1,0 +1,10 @@
+{
+  "presets": [
+    "babel-preset-env",
+    "react",
+  ],
+  "plugins": [
+    "babel-plugin-transform-flow-strip-types",
+    "transform-object-rest-spread",
+  ]
+}

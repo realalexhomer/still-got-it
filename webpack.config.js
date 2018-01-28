@@ -3,19 +3,19 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const VENDOR_LIBS = [
-  'react', 'react-dom', 'react-router', 'redux',
+  'react', 'react-dom', 'react-router', 'redux', 'react-redux',
 ]
 
 module.exports = {
   context: `${__dirname}/src`,
 
   entry: {
-    bundle: './js/index.js',
+    bundle: './js/index.jsx',
     vendor: VENDOR_LIBS,
   },
 
   output: {
-    path: `${__dirname}/public`,
+    path: `${__dirname}/dist`,
     filename: '[name].[chunkhash].js',
   },
 
@@ -29,28 +29,17 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js?$/,
+        test: /\.jsx?$/,
         use: 'eslint-loader',
         exclude: /node_modules/,
         enforce: 'pre',
       },
       {
-        test: /\.js?$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: [
           {
             loader: 'babel-loader',
-            options: {
-              babelrc: false,
-              presets: ['babel-preset-env'],
-            },
-          },
-          {
-            loader: 'babel-loader',
-            options: {
-              babelrc: false,
-              presets: ['react']
-            },
           },
         ],
       },
@@ -85,4 +74,8 @@ module.exports = {
       template: './index.pug',
     }),
   ],
+
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
 }
