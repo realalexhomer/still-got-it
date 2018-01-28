@@ -1,6 +1,9 @@
 var eslintConfig = { // use es5 as this file will not be compiled and we don't know Node version of server
   "extends": "airbnb",
   "parser": "babel-eslint",
+  "plugins": [
+    "flowtype"
+  ],
   "rules": {
     "semi": [2, "never"]
   },

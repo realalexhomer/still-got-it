@@ -1,10 +1,9 @@
-const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const VENDOR_LIBS = [
-  'react', 'react-dom', 'react-router', 'redux'
+  'react', 'react-dom', 'react-router', 'redux',
 ]
 
 module.exports = {
@@ -12,7 +11,7 @@ module.exports = {
 
   entry: {
     bundle: './js/index.js',
-    vendor: VENDOR_LIBS
+    vendor: VENDOR_LIBS,
   },
 
   output: {
@@ -39,35 +38,35 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [{
-              loader: 'css-loader',
-              options: {
-                modules: true,
-                importLoaders: 1,
-                sourceMap: true,
-                localIdentName: '[path]--[name]-[local]--[hash:base64:5]',
-              },
-            }],
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              importLoaders: 1,
+              sourceMap: true,
+              localIdentName: '[path]--[name]-[local]--[hash:base64:5]',
+            },
+          }],
         }),
       },
       {
         test: /\.pug$/,
-        use: ['pug-loader']
+        use: ['pug-loader'],
       },
       {
         test: /\.test\.js$/,
         use: ['mocha-loader', 'eslint-loader'],
         exclude: /node_modules/,
-      }
-    ]
+      },
+    ],
   },
 
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
-      names: ['vendor', 'manifest']
+      names: ['vendor', 'manifest'],
     }),
     new ExtractTextPlugin('style.css'),
     new HtmlWebpackPlugin({
-      template: './index.pug'
+      template: './index.pug',
     }),
-  ]
+  ],
 }
