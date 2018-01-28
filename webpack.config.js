@@ -30,8 +30,29 @@ module.exports = {
     rules: [
       {
         test: /\.js?$/,
-        use: ['babel-loader', 'eslint-loader'],
+        use: 'eslint-loader',
         exclude: /node_modules/,
+        enforce: 'pre',
+      },
+      {
+        test: /\.js?$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              babelrc: false,
+              presets: ['babel-preset-env'],
+            },
+          },
+          {
+            loader: 'babel-loader',
+            options: {
+              babelrc: false,
+              presets: ['react']
+            },
+          },
+        ],
       },
       {
         test: /\.css$/,
@@ -51,11 +72,6 @@ module.exports = {
       {
         test: /\.pug$/,
         use: ['pug-loader'],
-      },
-      {
-        test: /\.test\.js$/,
-        use: ['mocha-loader', 'eslint-loader'],
-        exclude: /node_modules/,
       },
     ],
   },
