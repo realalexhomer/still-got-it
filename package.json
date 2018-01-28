@@ -38,6 +38,7 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "extract-text-webpack-plugin": "^3.0.2",
+    "flow-bin": "^0.64.0",
     "html-webpack-plugin": "^2.30.1",
     "mocha": "^5.0.0",
     "pug": "^2.0.0-rc.4",
