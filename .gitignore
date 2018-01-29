@@ -1,6 +1,8 @@
 # Dist folder
 dist/
 
+.DS_Store
+
 # Logs
 logs
 *.log
