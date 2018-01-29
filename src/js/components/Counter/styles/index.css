@@ -1,0 +1,36 @@
+@import "variables";
+
+@font-face {
+  font-family: 'bebaskai';
+  src: url('../../../../assets/fonts/bebaskai-regular-webfont.woff2') format('woff2'),
+       url('../../../../assets/fonts/bebaskai-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.counter {
+  background-color: $primary-bg;
+  padding: $padding-mobile-vertical $padding-mobile-horizontal;
+  text-align: center;
+  width: 100%;
+}
+
+.button {
+  background-color: rgb(252, 27, 89);
+  border-radius: 2px;
+  border: 0px;
+  cursor: pointer;
+  width: 80px;
+  height: 20px;
+  &:first-child {
+    background-color: rgb(61, 253, 188);
+  }
+}
+
+.count {
+  display: block;
+  font-family: 'bebaskai';
+  font-size: 100px;
+  padding: 50px 10px;
+  color: $primary-text;
+}

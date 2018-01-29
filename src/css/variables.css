@@ -1,10 +1,18 @@
-/* Variables */
-
 /*  Media Queries */
 $tablet: 768px;
 $desktop: 1024px;
+$desktop-large: 1440px;
 
 /* Colors */
+$primary-text: rgb(247, 247, 247);
+$primary-bg: rgb(21, 25, 31);
 
-$primary-text: gray;
-$primary-bg: pink;
+/* Sizes */
+$padding-mobile-horizontal: 15px;
+$padding-mobile-vertical: 20px;
+
+$padding-tablet-horizontal: 20px;
+$padding-tablet-vertical: 25px;
+
+$padding-desktop-horizontal: $padding-tablet-horizontal;
+$padding-desktop-vertical: $padding-tablet-vertical;

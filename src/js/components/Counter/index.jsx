@@ -2,7 +2,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { counterStep } from './actions'
-import style from './style.css'
+import style from './styles/index.css'
 
 type CounterProps = {
   step: Function,
@@ -14,9 +14,9 @@ function Counter(props:CounterProps) {
 
   return (
     <div className={style.counter}>
-      <button className={style.button} onClick={() => { step(1) }}>Increment</button>
-      <button className={style.button} onClick={() => { step(-1) }}>Decrement</button>
+      <button className={style.button} onClick={() => { step(1) }} />
       <p className={style.count}>{count}</p>
+      <button className={style.button} onClick={() => { step(-1) }} />
     </div>
   )
 }

@@ -5,6 +5,8 @@ module.exports = {
     },
     'postcss-url': {},
     'postcss-cssnext': {},
+    'postcss-mixins': {},
+    'postcss-nested': {},
     'postcss-simple-vars': {},
     'postcss-browser-reporter': {},
   },
